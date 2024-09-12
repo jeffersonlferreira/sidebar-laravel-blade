@@ -4,7 +4,7 @@
     $isActive = $active || strpos($slot->toHtml(), 'active') !== false;
 @endphp
 
-<li class="hs-accordion pb-2 {{ $isActive ? 'active-class bg-gray-50 rounded-lg' : '' }}" id="account-accordion">
+<li class="hs-accordion {{ $isActive ? 'active-class bg-gray-50 rounded-lg pb-2' : '' }}" id="account-accordion">
     <button type="button"
         class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-800 rounded-lg hover:bg-gray-200 focus:outline-none focus:bg-gray-200
         {{ $isActive ? 'bg-gray-200 shadow' : '' }}"

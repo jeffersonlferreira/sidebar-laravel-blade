@@ -2,7 +2,7 @@
     <nav class="px-4 sm:px-6 flex basis-full items-center w-full mx-auto">
 
         <div class="me-5 lg:me-0 lg:hidden flex justify-center">
-            <a class="flex-none rounded-md text-xl inline-block font-semibold focus:outline-none focus:opacity-80" href="#" aria-label="Logo">
+            <a class="flex-none rounded-md text-xl inline-block font-semibold focus:outline-none focus:opacity-80" href="{{ route('dashboard') }}" aria-label="Logo">
                 <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
             </a>
         </div>
@@ -16,7 +16,14 @@
                         <div class="shrink-0 group block">
                             <div class="flex items-center">
                                 <span class="inline-flex items-center justify-center size-[38px] rounded-full bg-gray-500 text-sm font-semibold text-white leading-none mr-1">
-                                    JF
+
+                                    @php
+                                        $name = Auth::user()->name;
+                                        $initials = collect(explode(' ', $name))->map(fn($word) => strtoupper($word[0]))->join('');
+                                    @endphp
+
+                                    {{ $initials }}
+
                                 </span>
                                 <h3 class="font-semibold text-gray-800 ms-1">
                                     {{ Auth::user()->name }}
