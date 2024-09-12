@@ -1,7 +1,7 @@
 
 # Laravel Sidebar blade
 
-Sidebar desenvolvida com base no starter kit com blade.
+Sidebar desenvolvida com base no starter kit com blade utilizando Preline UI, Tailwind CSS
 
 
 ## Screenshots
